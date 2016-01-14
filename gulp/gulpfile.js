@@ -10,8 +10,8 @@ function getDataForFile(file){
 
 gulp.task('default', function(){
 	nunjucksRender.nunjucks.configure(['src/templates/'], {watch:false});
-	return gulp.src('src/templates/*.html')
-		.pipe(data(getDatForFile))
+	return gulp.src('src/pages/**/*.html')
+		.pipe(data(getDataForFile))
 		.pipe(nunjucksRender())
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('site'));
 });
