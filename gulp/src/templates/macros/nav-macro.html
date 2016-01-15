@@ -1,0 +1,11 @@
+{% macro active(activePage='home') %}
+	<nav>
+		<img src="img/omnious-logo-bev.png" alt="omnio.us">
+		<ul>
+			<li><a href="#digital" class="btn {% if activePage == 'home' %}active{%endif%}">digital</a></li>
+			<li><a href="#design" class="btn {% if activePage == 'design' %}active{%endif%}">design</a></li>
+			<li><a href="#more" class="btn {% if activePage == 'more' %}active{%endif%}">&amp; more</a></li>
+			<li><a href="#about" class="btn {% if activePage == 'about' %}active{%endif%}">about me</a></li>
+		</ul>
+	</nav>
+{% endmacro %}
